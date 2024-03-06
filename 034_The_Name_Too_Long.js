@@ -46,6 +46,7 @@ console.log(comp(b1, b2));
 //     return !!a && !!b && a.map(x => x*x).sort().join() == b.sort().join();
 //   }
 
+// !! = double bang
 // Bisa sesingkat ini, okeh terimakasih :)
 
 
