@@ -23,10 +23,12 @@
 //     return tampung;
 // }
 
-function removeSmallest(numbers) {
-  let indexOfMin = numbers.indexOf(Math.min(...numbers));
-  return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
-}
+// function removeSmallest(numbers) {
+//   let indexOfMin = numbers.indexOf(Math.min(...numbers));
+//   return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+// }
+
+let removeSmallest = numbers => [...numbers.slice(0, numbers.indexOf(Math.min(...numbers))), ...numbers.slice(numbers.indexOf(Math.min(...numbers)) + 1)];
 
 console.log(removeSmallest([1, 2, 3, 4, 5]));
 console.log(removeSmallest([5, 4, 3, 2, 1]));

@@ -23,5 +23,9 @@
 
 const descendingOrder = n => parseInt(String(n).split("").sort().reverse().join(""));
 
+
+console.log("ikan");
+console.log(0);
+
 console.log(descendingOrder(0));
 console.log(descendingOrder(42145));
