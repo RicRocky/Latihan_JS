@@ -9,7 +9,7 @@ let bingo = (ticket, win) => {
     }
 
     for (let i = 0; i < arrAngka.length; i++){
-        for (let j = 0; j < arrAngka.length; j++){
+        for (let j = i; j < arrAngka.length; j++){
             if (i != j){
                 if (arrAngka[i] == arrAngka[j]){
                     countAngkaSama++;
@@ -20,10 +20,10 @@ let bingo = (ticket, win) => {
     }
     
     for (let i = 0; i < arrKata.length; i++){
-        for (let j = 0; j < arrKata.length; j++){
+        for (let j = i; j < arrKata.length; j++){
             if (i != j){
                 if (arrKata[i] == arrKata[j]){
-                    countKataSama++;
+                    countKataSama++;    
                     break;
                 }
             }
@@ -31,11 +31,11 @@ let bingo = (ticket, win) => {
     }
 
     let kondisi = "";
-
+    console.log(countAngkaSama);
     if (win == 1){
-        if(countAngkaSama >= win){
-            kondisi = "Winner!";
-        }else{
+        // if(countAngkaSama == win){
+        //     kondisi = "Winner!";
+        // }else{
             for (let i = 0; i < arrKata.length; i++){
                 if(arrKata[i] == "ABC"){
                     kondisi = "Winner!"
@@ -44,7 +44,7 @@ let bingo = (ticket, win) => {
                     kondisi = "Loser!";
                 } 
             }
-        }
+        // }
     }else{
         if (countAngkaSama >= win){
             if(countAngkaSama == countKataSama){
@@ -65,7 +65,7 @@ console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 2));
 console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
 console.log(bingo([['HGTYRE', 74], ['BE', 66], ['JKTY', 74]], 3));
 console.log(bingo([['VLZV',86], ['ZX',90], ['VD',81], ['VHAO',76]], 2));
-
-
+console.log(bingo([['XMC',75], ['OH',88], ['FISS',72], ['QDBASO',88]], 1));
+console.log(bingo([[CRAWVWN,66], [HAY,73], [CNSZ,74], [DTHKR,86], [YJEXND,78], [TMV,72], [YBE,66]]))
 
 //https://www.codewars.com/kata/57f625992f4d53c24200070e/train/javascript
