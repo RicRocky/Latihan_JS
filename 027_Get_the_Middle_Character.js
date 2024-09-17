@@ -8,5 +8,6 @@ let getMiddle = s => {
 
 // Ntah kenapa Math.ceil (untut pembulatan ke bawah)gk berkerja
 
+
 console.log(getMiddle("testing"));
 console.log(getMiddle("test"));
