@@ -27,3 +27,11 @@ const ipsBetween = (start, end) => {
     
     return num(end) - num(start);
 }
+
+
+console.log(Math.pow(256, 4));
+
+console.log(32/4);
+
+console.log(Math.pow(2, 8)-1);
+console.log(Math.pow(2, 16)vc b);
